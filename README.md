@@ -1,4 +1,5 @@
 <h1> LeetCode Solutions <h1/>
+<p> This repository keeps a track of all the problems I do on LeetCode. All the solution are done in <bold>JAVA</bold>, one file can have multiple solutions </p>
 <p align="left">
 <a href="https://linkedin.com/in/mukul-gaur" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="mukulgaur" height="30" width="40" /></a>
 <a href="https://instagram.com/mukul_06" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="mukul_06" height="30" width="40" /></a>
