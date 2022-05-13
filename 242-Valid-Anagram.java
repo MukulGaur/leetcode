@@ -1,22 +1,43 @@
-// Solution 2 - Runtime 20ms
+// Solution 3 - Runtime 2ms
 
 class Solution {
     public boolean isAnagram(String s, String t) {
         
         if(s.length()!=t.length()) return false;
+        if(s.equals(t)) return true;
         
-        HashMap<Character, Integer> sMap = new HashMap<>();
-        HashMap<Character, Integer> tMap = new HashMap<>();
+        char[] res = new char[26];
         
-        for(int i=0; i<s.length(); i++){
-            sMap.merge(s.charAt(i), 1, Integer::sum);
-            tMap.merge(t.charAt(i), 1, Integer::sum);
+        for(char c: s.toCharArray()) res[c-'a']++;
+        
+        for(char c: t.toCharArray()){
+            if(res[c-'a']--==0) return false;
         }
         
-        return sMap.equals(tMap);
+        return true;
         
     }
 }
+
+// Solution 2 - Runtime 20ms
+
+// class Solution {
+//     public boolean isAnagram(String s, String t) {
+        
+//         if(s.length()!=t.length()) return false;
+        
+//         HashMap<Character, Integer> sMap = new HashMap<>();
+//         HashMap<Character, Integer> tMap = new HashMap<>();
+        
+//         for(int i=0; i<s.length(); i++){
+//             sMap.merge(s.charAt(i), 1, Integer::sum);
+//             tMap.merge(t.charAt(i), 1, Integer::sum);
+//         }
+        
+//         return sMap.equals(tMap);
+        
+//     }
+// }
 
 // Solution 1 - Time Limit Exceeded for some test cases.
 
