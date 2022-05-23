@@ -1,4 +1,4 @@
-Solution 2 - runtime 4ms | time - O(n)
+// Solution 2 - runtime 4ms | time - O(n)
   
   class Solution {
     public int lengthOfLongestSubstring(String s) {
@@ -21,7 +21,7 @@ Solution 2 - runtime 4ms | time - O(n)
     }
 }
 
-Solution 1 - runtime 13ms | time - O(n)
+// Solution 1 - runtime 13ms | time - O(n)
 
 class Solution {
     public int lengthOfLongestSubstring(String s) {
