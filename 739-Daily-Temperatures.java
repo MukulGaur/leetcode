@@ -1,4 +1,29 @@
+// Solution 2 - runtime 2393ms
 
+class Solution {
+    public int[] dailyTemperatures(int[] temperatures) {
+        
+        int[] ans = new int[temperatures.length];
+        
+        int left=0, right=1;
+        
+        while(right<temperatures.length){
+            if(temperatures[right]>temperatures[left]){
+                ans[left]=right-left;
+                left++;
+                right=left;
+            }
+            else if(right==ans.length-1){
+                left++;
+                right=left;
+            }
+            right++;
+        }
+        
+        return ans;
+        
+    }
+}
 
 // Solution 1 - time limit exceeded
 
