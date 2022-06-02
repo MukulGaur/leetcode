@@ -1,3 +1,27 @@
+// Solution 3 - runtime 199ms | TC - O(n)
+
+class Solution {
+    public int[] dailyTemperatures(int[] temp) {
+        
+        int n = temp.length;
+        
+        int[] res = new int[n];
+        
+        Stack<Integer[]> stack = new Stack();
+        
+        for(int i=0; i<n; i++){
+            while(!stack.isEmpty() && stack.peek()[0]<temp[i]){
+                Integer[] tp = stack.pop();
+                res[tp[1]] = i-tp[1];
+            }
+            stack.push(new Integer[]{temp[i],i});
+        }
+        
+        return res;
+        
+    }
+}
+
 // Solution 2 - runtime 2393ms
 
 class Solution {
